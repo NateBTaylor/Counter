@@ -157,3 +157,20 @@ button.addEventListener("click", async () => {
   spawnShape()
   showShareCard(clickCount, clickCount);
 });
+
+
+
+
+
+
+
+
+
+document.querySelector(".share").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      alert("Link copied to clipboard!");
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  });
