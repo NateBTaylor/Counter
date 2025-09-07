@@ -90,6 +90,7 @@ h3 {
     font-size:1rem;
     margin-top:1rem;
     z-index:100;
+    color:black;
 }
 
 canvas {
@@ -139,3 +140,7 @@ canvas {
     margin-bottom:1rem;
   }
   
+
+  span {
+    color:rgb(176, 6, 6);
+  }
