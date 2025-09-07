@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root { --size: 300px; }
+
+* {
+    margin:0;
+    padding:0;
+    outline:none;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background:rgb(203, 255, 219);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom:0.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-bottom:4rem;
+    color:rgb(87, 87, 87);
+}
+
+.stuff {
+    max-width:400px;
+    width:90%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
+    margin-top:3rem;
+}
+
+.btn {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 10px solid rgb(176, 6, 6);
+    appearance: none;
+    background: #e32636;         /* vivid red */
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .08s ease, box-shadow .08s ease, filter .2s ease;
+    box-shadow: 0 12px 24px rgba(0,0,0,.15), inset 0 -8px 16px rgba(0,0,0,.2);
+    align-self:center;
+  }
+
+  .btn:hover {
+    filter: brightness(1.05);
+  }
+
+  .btn:active {
+    transform: translateY(2px) scale(.98);
+    box-shadow: 0 8px 18px rgba(0,0,0,.18), inset 0 -4px 10px rgba(0,0,0,.25);
+  }
+
+  .btn:focus-visible {
+    outline: 4px solid rgba(0, 115, 230, .6);
+    outline-offset: 6px;
+  }
+
+  /* Optional: make it scale on smaller screens */
+  @media (max-width: 400px) {
+    :root { --size: 240px; }
+  }
+
+  @media (max-width: 500px) {
+    .stuff {
+        margin-top:1.5rem;
+    }
+  }
+
+.share {
+    position:fixed;
+    bottom:0;
+    left:0;
+    padding:1rem;
+    font-family: "Inter", sans-serif;
+    text-align:center;
+    width:100%;
+    border:none;
+    background:rgb(255, 207, 255);
+    border-top:7px solid rgb(250, 154, 250);
+    font-weight:bold;
+    font-size:1rem;
+    margin-top:1rem;
+    z-index:100;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:transparent;
+    z-index:10;
+    pointer-events: none;
+}
+
+#shareCard {
+    position: relative;
+    padding: 15px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    text-align: center;
+    z-index: 30;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    width: 300px;
+    margin:auto;
+    margin-top:1.5rem;
+    margin-bottom:5.5rem;
+  }
+  
+  #shareCard.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #shareImage {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  #downloadButton {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #1da1f2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-bottom:1rem;
+  }
+  
